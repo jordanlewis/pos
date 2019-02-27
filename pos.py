@@ -12,9 +12,9 @@ p = Usb(0x04b8, 0x0e15, 0)
 def receipt():
     if request.method == 'GET':
         return """<html>
-Type some stuff into this box and press enter"
+Type some stuff into this box and press enter
 <form>
-<textarea name="data"/>
+<textarea name="data"></textarea>
 <input type="submit"/>
 </form>
 </html>"""
