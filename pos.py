@@ -11,7 +11,14 @@ p = Usb(0x04b8, 0x0e15, 0)
 @app.route("/", methods=['GET', 'POST'])
 def receipt():
     if request.method == 'GET':
-        return "Hello World! Post here to print text."
+        return """<html>
+Type some stuff into this box and press enter"
+<form>
+<textarea name="data"/>
+<input type="submit"/>
+</form>
+</html>"""
+
     text = request.form['data']
     p.text(text)
     p.cut()
